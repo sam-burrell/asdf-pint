@@ -19,7 +19,7 @@ list_versions() {
 }
 
 filter_pint(){
-	sed -n -E 's/pint-(.+)$/\1/p'
+	cut -d'v' -f2
 }
 
-echo "$(list_versions)"
+echo "$(list_versions|filter_pint)"
