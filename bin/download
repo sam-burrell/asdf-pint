@@ -125,6 +125,7 @@ download() {
   if [ "$download_type" == "version" ]; then
     declare -r download_url="$(find_file_url "$download_version")"
     if [ -z "$download_url" ]; then
+      echo $download_url
       error_exit "Malformed URL"
     fi
     mkdir "$download_path/bin"
