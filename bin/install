@@ -59,6 +59,7 @@ install_pint() {
         ;;
       *)
         tar zxvf "$source_path" -C "$distination" >/dev/null || fail "Could not uncompress"
+        find $distination -iname pint-* -exec mv {} $distination/pint \; || fail "Could not move pint"
         ;;
     esac
 
