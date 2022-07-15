@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 declare -r PINT_REPO="https://github.com/cloudflare/pint"
-declare -r RELEASES_URL="https://github.com/cloudflare/pint/releases"
+declare -r RELEASES_URL="https://api.github.com/repos/cloudflare/pint/releases"
 
 
 error_exit() {

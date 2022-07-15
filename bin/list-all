@@ -7,7 +7,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-readonly RELEASES_URL="https://github.com/cloudflare/pint/releases"
+readonly RELEASES_URL="https://api.github.com/repos/cloudflare/pint/releases"
 
 # https://github.com/rbenv/ruby-build/blob/ac92ec0507fad718e7abcf13540641937ecfef3f/bin/ruby-build#L1201
 sort_versions() {
