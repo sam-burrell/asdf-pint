@@ -1,15 +1,15 @@
-# asdf-pint
+---
+nav_exclude: true
+---
 
-![](https://github.com/sam-burrell/asdf-pint/workflows/ci/badge.svg)
+# pint
 
-[pint](https://github.com/cloudflare/pint) plugin for the [asdf](https://github.com/asdf-vm/asdf) version manager.
+pint is a Prometheus rule linter.
 
-## Install
+You can find [online docs](https://cloudflare.github.io/pint/) on GitHub Pages.
 
-```sh
-asdf plugin-add pint https://github.com/sam-burrell/asdf-pint.git
-```
+Alternatively you can read raw Markdown documentation [here](/docs/index.md):
 
-## Use
+Changelog is kept at [docs/changelog.md](/docs/changelog.md).
 
-Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to install and manage versions of pint.
+Check [examples](/docs/examples) dir for sample config files.
