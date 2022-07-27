@@ -10,7 +10,7 @@ fail() {
 get_arch() {
   local arch="$(uname -m)"
   if [ "$arch" = "x86_64" ]; then
-    echo "x86_64"
+    echo "amd64"
   elif [ "$arch" = "aarch64" ]; then
     echo "arm64"
   else
@@ -56,6 +56,9 @@ install_pint() {
   (
     echo "∗ Downloading and installing pint $version..."
     mkdir -p "$distination"
+    echo $version
+    echo $platform
+    echo $arch
     download_file=$(curl -sq -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/cloudflare/pint/releases" | grep "name" | grep $version | grep $platform | grep $arch | cut -d '"' -f 4)
     download_url="https://github.com/cloudflare/pint/releases/download/v${version}/$download_file"
     curl -L "$download_url" >"$source_path" || fail "Could not download $download_url"
